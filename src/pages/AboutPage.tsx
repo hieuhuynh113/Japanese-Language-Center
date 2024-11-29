@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Typography, Grid, Paper, Divider, styled } from '@mui/material';
+import { Container, Box, Typography, Grid, Paper, Divider, styled, Card, CardMedia } from '@mui/material';
 import { styled as muiStyled } from '@mui/material/styles';
 import { School, EmojiEvents, Group, Language, Timeline, Psychology, Public, WorkspacePremium } from '@mui/icons-material';
 import { motion, useAnimation, useInView } from 'framer-motion';
@@ -199,25 +199,173 @@ const AboutPage: React.FC = () => {
                 mb: 3
               }}
             >
-              Khám Phá Yamada
+              Công ty cổ phần Sen Quốc Tế
             </Typography>
-            <Typography variant="h5" sx={{ color: 'text.secondary', mb: 4, fontStyle: 'italic' }}>
+            <Typography variant="h5" sx={{ color: 'text.secondary', mb: 6, fontStyle: 'italic' }}>
               "Nơi Tiếng Nhật Trở Thành Hành Trang Cho Tương Lai"
             </Typography>
           </motion.div>
+
+          <Grid container spacing={6} alignItems="center">
+            {/* Left side - Text content */}
+            <Grid item xs={12} md={7}>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              >
+                <Box sx={{ textAlign: 'left' }}>
+                  <Typography 
+                    variant="body1" 
+                    sx={{ 
+                      mb: 4, 
+                      lineHeight: 1.8,
+                      fontSize: '1.1rem',
+                      color: 'text.primary'
+                    }}
+                  >
+                    Trong bối cảnh phát triển kinh tế nhanh chóng, hội nhập quốc tế sâu rộng, mối quan hệ Việt- Nhật ngày càng bền vững, công ty CP SEN Quốc tế ra đời như nhịp cầu nối Việt Nam – Nhật Bản.
+                  </Typography>
+
+                  <Card 
+                    elevation={3} 
+                    sx={{ 
+                      mb: 4, 
+                      background: 'linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%)',
+                      borderRadius: 2
+                    }}
+                  >
+                    <Box sx={{ p: 3 }}>
+                      <Typography 
+                        variant="h6" 
+                        gutterBottom 
+                        sx={{ 
+                          color: 'primary.main',
+                          fontWeight: 600,
+                          mb: 2
+                        }}
+                      >
+                        Các lĩnh vực hoạt động:
+                      </Typography>
+                      <Box sx={{ pl: 2 }}>
+                        {[
+                          'Đào tạo Nhật Ngữ',
+                          'Tư vấn du học Nhật Bản',
+                          'Giới thiệu việc làm tiếng Nhật',
+                          'Biên phiên dịch tiếng Nhật',
+                          'Sinh trắc vân tay'
+                        ].map((service, index) => (
+                          <Typography 
+                            key={index}
+                            variant="body1" 
+                            sx={{ 
+                              mb: 1,
+                              display: 'flex',
+                              alignItems: 'center',
+                              '&:before': {
+                                content: '"•"',
+                                color: 'primary.main',
+                                fontWeight: 'bold',
+                                marginRight: 1
+                              }
+                            }}
+                          >
+                            {service}
+                          </Typography>
+                        ))}
+                      </Box>
+                    </Box>
+                  </Card>
+
+                  <Typography 
+                    variant="body1" 
+                    sx={{ 
+                      mb: 3,
+                      lineHeight: 1.8,
+                      fontSize: '1.1rem',
+                      fontStyle: 'italic',
+                      color: 'primary.main',
+                      fontWeight: 500
+                    }}
+                  >
+                    "Thành công của các bạn chính là sự tồn tại và phát triển của chúng tôi"
+                  </Typography>
+
+                  <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
+                    Chúng tôi mong muốn sẽ mở đường tương lai và chắp cánh ước mơ du học Nhật Bản cho các bạn trẻ Việt Nam nói chung và các bạn trẻ Khánh Hòa nói riêng.
+                  </Typography>
+                </Box>
+              </motion.div>
+            </Grid>
+
+            {/* Right side - Image */}
+            <Grid item xs={12} md={5}>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.7, duration: 0.8 }}
+              >
+                <Card 
+                  elevation={5}
+                  sx={{ 
+                    borderRadius: 4,
+                    overflow: 'hidden',
+                    transform: 'perspective(1000px) rotateY(-5deg)',
+                    transition: 'transform 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'perspective(1000px) rotateY(0deg)'
+                    }
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="https://senquocte.com/wp-content/uploads/2023/05/trung-tam635x577.png"
+                    alt="Sen Quốc Tế"
+                    sx={{
+                      width: '100%',
+                      height: 'auto',
+                      display: 'block'
+                    }}
+                  />
+                </Card>
+              </motion.div>
+            </Grid>
+          </Grid>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ delay: 0.9, duration: 0.8 }}
           >
-            <Box sx={{ maxWidth: '800px', mx: 'auto', px: 3 }}>
-              <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
-                Được thành lập từ năm 2010, Trung tâm Nhật ngữ Yamada tự hào là điểm đến tin cậy cho những người muốn chinh phục tiếng Nhật. 
-                Chúng tôi không chỉ đào tạo ngôn ngữ mà còn là cầu nối văn hóa, mở ra cơ hội học tập và việc làm tại Nhật Bản.
+            <Box 
+              sx={{ 
+                maxWidth: '900px', 
+                mx: 'auto', 
+                mt: 6, 
+                p: 4,
+                borderRadius: 2,
+                background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(245,245,245,0.9) 100%)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
+              }}
+            >
+              <Typography 
+                variant="body1" 
+                sx={{ 
+                  mb: 3, 
+                  lineHeight: 1.8,
+                  textAlign: 'left'
+                }}
+              >
+                Tâm huyết với nghề, tận tâm với công việc, chúng tôi luôn cam kết nâng cao chất lượng giảng dạy và dịch vụ, giữ vững niềm tin nơi khách hàng và các đối tác.
               </Typography>
-              <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-                Với đội ngũ giảng viên giàu kinh nghiệm và phương pháp giảng dạy tiên tiến, 
-                chúng tôi cam kết đồng hành cùng học viên trên mọi chặng đường, từ người mới bắt đầu đến các cấp độ JLPT cao cấp.
+              <Typography 
+                variant="body1" 
+                sx={{ 
+                  lineHeight: 1.8,
+                  textAlign: 'left'
+                }}
+              >
+                Thành lập từ tâm huyết của hội đồng cổ đông là những du học sinh Nhật Bản và là cựu sinh viên của trường ĐH Thủy Sản tiền thân của ĐH Nha Trang ngày nay. Công ty chúng tôi đang từng bước phát triển, khẳng định vị trí, nâng cao giá trị của mình trước Khách hàng, đối tác và bạn bè trong và ngoài nước.
               </Typography>
             </Box>
           </motion.div>

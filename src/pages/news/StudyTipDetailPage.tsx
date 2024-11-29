@@ -10,6 +10,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  ListItemButton,
   useTheme,
   useMediaQuery,
   Button,
@@ -17,6 +18,7 @@ import {
   IconButton,
   Breadcrumbs,
   Link,
+  alpha
 } from '@mui/material';
 import {
   Event as EventIcon,
@@ -94,40 +96,113 @@ const StudyTipDetailPage = () => {
     if (section) {
       const yOffset = -80;
       const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      window.scrollTo({ 
+        top: y, 
+        behavior: 'smooth'
+      });
     }
     setDrawerOpen(false);
   };
 
   const TableOfContents = () => (
-    <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.50', position: 'sticky', top: 100 }}>
-      <Box display="flex" alignItems="center" mb={2}>
-        <ListIcon sx={{ mr: 1 }} />
-        <Typography variant="h6">Mục lục</Typography>
+    <Paper 
+      elevation={0} 
+      sx={{ 
+        p: 3,
+        bgcolor: 'background.paper',
+        position: 'sticky', 
+        top: 100,
+        maxHeight: '75vh',
+        overflow: 'auto',
+        borderRadius: 2,
+        border: '1px solid',
+        borderColor: theme.palette.divider,
+        '&::-webkit-scrollbar': {
+          width: '3px',
+        },
+        '&::-webkit-scrollbar-track': {
+          background: 'transparent',
+        },
+        '&::-webkit-scrollbar-thumb': {
+          background: theme.palette.primary.light,
+          borderRadius: '10px',
+        },
+      }}
+    >
+      <Box 
+        sx={{
+          pb: 2,
+          mb: 2,
+          borderBottom: `1px solid ${theme.palette.divider}`,
+          display: 'flex',
+          alignItems: 'center'
+        }}
+      >
+        <ListIcon 
+          sx={{ 
+            mr: 1.5, 
+            color: theme.palette.primary.main,
+            fontSize: 22
+          }} 
+        />
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            fontWeight: 600,
+            color: theme.palette.text.primary,
+            letterSpacing: '0.5px'
+          }}
+        >
+          Mục lục
+        </Typography>
       </Box>
-      <List dense>
+      <List 
+        sx={{ 
+          p: 0,
+          mx: -1
+        }}
+      >
         {toc.map((item, index) => (
           <ListItem
             key={index}
-            onClick={() => scrollToSection(item.id)}
-            sx={{
-              pl: item.level,
-              cursor: 'pointer',
-              '&:hover': {
-                bgcolor: 'primary.light',
-                color: 'primary.contrastText',
-              },
-            }}
+            disablePadding
+            component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: index * 0.05 }}
           >
-            <ListItemText
-              primary={item.text}
-              primaryTypographyProps={{
-                sx: {
-                  fontSize: item.level === 1 ? '1rem' : '0.9rem',
-                  fontWeight: item.level === 1 ? 600 : 400,
+            <ListItemButton
+              onClick={() => scrollToSection(item.id)}
+              sx={{
+                pl: item.level * 2,
+                py: 1,
+                mx: 1,
+                my: 0.5,
+                borderRadius: 1,
+                transition: 'all 0.2s ease',
+                '&:hover': {
+                  bgcolor: alpha(theme.palette.primary.main, 0.08),
+                  pl: (item.level * 2) + 0.5,
+                  '& .MuiTypography-root': {
+                    color: theme.palette.primary.main,
+                  }
                 },
               }}
-            />
+            >
+              <ListItemText
+                primary={item.text}
+                primaryTypographyProps={{
+                  sx: {
+                    fontSize: item.level === 1 ? '0.95rem' : '0.875rem',
+                    fontWeight: /^\d+\./.test(item.text) ? 700 : (item.level === 1 ? 600 : 400),
+                    color: item.level === 1 
+                      ? theme.palette.text.primary 
+                      : theme.palette.text.secondary,
+                    transition: 'color 0.2s ease',
+                  },
+                }}
+              />
+            </ListItemButton>
           </ListItem>
         ))}
       </List>
@@ -182,8 +257,24 @@ const StudyTipDetailPage = () => {
           anchor="right"
           open={drawerOpen}
           onClose={() => setDrawerOpen(false)}
+          SlideProps={{
+            timeout: 300,
+          }}
+          PaperProps={{
+            component: motion.div,
+            initial: { x: '100%' },
+            animate: { x: 0 },
+            exit: { x: '100%' },
+            transition: { type: 'spring', stiffness: 300, damping: 30 },
+          }}
         >
-          <Box sx={{ width: 250, p: 2 }}>
+          <Box 
+            component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            sx={{ width: 250, p: 2 }}
+          >
             <TableOfContents />
           </Box>
         </Drawer>

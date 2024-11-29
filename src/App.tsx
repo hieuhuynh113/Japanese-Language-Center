@@ -50,10 +50,8 @@ import TimetablePage from './pages/schedule/TimetablePage';
 import JLPTPage from './pages/schedule/JLPTPage';
 
 // News Pages
-import CulturePage from './pages/news/CulturePage';
 import StudyTipsPage from './pages/news/StudyTipsPage';
 import JobsPage from './pages/news/JobsPage';
-import CultureDetailPage from './pages/news/CultureDetailPage';
 
 // Careers Pages
 import CareersPage from './pages/careers/CareersPage';
@@ -113,8 +111,6 @@ function App() {
             {/* News Routes */}
             <Route path="/news" element={<NewsPage />} />
             <Route path="/news/:id" element={<NewsDetailPage />} />
-            <Route path="/news/culture" element={<CulturePage />} />
-            <Route path="/news/culture/:id" element={<CultureDetailPage />} />
             <Route path="/news/study-tips" element={<StudyTipsPage />} />
             <Route path="/news/study-tips/:postId" element={<StudyTipDetailPage />} />
             <Route path="/news/jobs" element={<JobsPage />} />

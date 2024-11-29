@@ -68,7 +68,6 @@ const pages = [
     path: '/news',
     children: [
       { title: 'Tin Tức & Sự Kiện', path: '/news' },
-      { title: 'Văn Hóa Nhật Bản', path: '/news/culture' },
       { title: 'Góc Học Tập', path: '/news/study-tips' },
       { title: 'Cơ Hội Việc Làm', path: '/news/jobs' },
     ],
@@ -128,6 +127,7 @@ const NavButton = styled(Button)(({ theme }) => ({
   fontSize: '0.95rem',
   textTransform: 'none',
   padding: theme.spacing(1, 2),
+  minWidth: '100px',
   '&:hover': {
     backgroundColor: 'rgba(0, 0, 0, 0.04)',
   },
@@ -197,9 +197,16 @@ const Navbar = () => {
             {/* Logo for larger screens */}
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 4 }}>
               <StyledLink to="/">
-                <LogoText variant="h5" noWrap>
-                  日本語センター
-                </LogoText>
+                <Box
+                  component="img"
+                  src="https://senquocte.com/wp-content/uploads/2023/03/cropped-Logo-512x512-nen-trang.jpg"
+                  alt="日本語センター"
+                  sx={{
+                    height: 50,
+                    width: 'auto',
+                    objectFit: 'contain'
+                  }}
+                />
               </StyledLink>
             </Box>
 
@@ -288,9 +295,16 @@ const Navbar = () => {
             {/* Logo for mobile */}
             <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1 }}>
               <StyledLink to="/">
-                <LogoText variant="h6" noWrap>
-                  日本語センター
-                </LogoText>
+                <Box
+                  component="img"
+                  src="https://senquocte.com/wp-content/uploads/2023/03/cropped-Logo-512x512-nen-trang.jpg"
+                  alt="日本語センター"
+                  sx={{
+                    height: 40,
+                    width: 'auto',
+                    objectFit: 'contain'
+                  }}
+                />
               </StyledLink>
             </Box>
 
@@ -309,7 +323,11 @@ const Navbar = () => {
                   key={page.path}
                   onMouseEnter={() => handleMouseEnter(page.path)}
                   onMouseLeave={handleMouseLeave}
-                  sx={{ position: 'relative' }}
+                  sx={{ 
+                    position: 'relative',
+                    display: 'flex',
+                    alignItems: 'center'
+                  }}
                 >
                   {page.children ? (
                     <>
@@ -329,6 +347,7 @@ const Navbar = () => {
                         anchorEl={document.getElementById(`nav-button-${page.path}`)}
                         sx={{
                           '& .MuiPaper-root': {
+                            position: 'absolute',
                             borderRadius: 2,
                             mt: 0.5,
                             minWidth: 180,
@@ -336,6 +355,8 @@ const Navbar = () => {
                             pointerEvents: 'auto',
                           },
                           pointerEvents: 'none',
+                          position: 'absolute',
+                          zIndex: 1300,
                         }}
                         MenuListProps={{
                           onMouseLeave: handleMouseLeave,

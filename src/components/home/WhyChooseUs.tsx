@@ -18,33 +18,33 @@ import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 const features = [
   {
     icon: <SchoolIcon sx={{ fontSize: 48 }} />,
-    title: 'Giáo viên bản xứ',
-    description: 'Đội ngũ giảng viên người Nhật giàu kinh nghiệm, nhiệt tình.',
-  },
-  {
-    icon: <GroupsIcon sx={{ fontSize: 48 }} />,
-    title: 'Lớp học nhỏ',
-    description: 'Tối đa 15 học viên/lớp để đảm bảo chất lượng giảng dạy.',
-  },
-  {
-    icon: <WorkIcon sx={{ fontSize: 48 }} />,
-    title: 'Cơ hội việc làm',
-    description: 'Kết nối doanh nghiệp Nhật Bản, hỗ trợ tìm việc sau tốt nghiệp.',
-  },
-  {
-    icon: <PublicIcon sx={{ fontSize: 48 }} />,
-    title: 'Du học Nhật Bản',
-    description: 'Tư vấn du học toàn diện, hỗ trợ visa và các thủ tục cần thiết.',
+    title: 'Kinh nghiệm lâu năm',
+    description: 'Có kinh nghiệm hơn 10 năm về đào tạo Nhật Ngữ và tư vấn hồ sơ du học Nhật Bản.',
   },
   {
     icon: <VerifiedIcon sx={{ fontSize: 48 }} />,
-    title: 'Cam kết đầu ra',
-    description: 'Đảm bảo học viên đạt chứng chỉ JLPT theo đúng trình độ.',
+    title: 'Trung tâm đầu tiên',
+    description: 'Là trung tâm đầu tiên tại Nha Trang Khánh Hòa được cấp phép về đào tạo tiếng Nhật và tư vấn hồ sơ du học Nhật Bản.',
+  },
+  {
+    icon: <GroupsIcon sx={{ fontSize: 48 }} />,
+    title: 'Tỷ lệ đỗ cao',
+    description: 'Tỷ lệ học viên đỗ trong các kỳ thì tiếng Nhật như JLPT, Nat-test... từ 90% trở lên.',
+  },
+  {
+    icon: <PublicIcon sx={{ fontSize: 48 }} />,
+    title: 'Tỷ lệ visa cao',
+    description: 'Tỷ lệ xin visa du học Nhật Bản luôn đạt ở mức cao từ 80%-90%. Được các đối tác Nhật Bản đánh giá cao.',
+  },
+  {
+    icon: <WorkIcon sx={{ fontSize: 48 }} />,
+    title: 'Đổi mới sáng tạo',
+    description: 'Chúng tôi luôn luôn đổi mới sáng tạo áp dụng các phương pháp học tập cũng như công nghệ mới vào đào tạo tiếng Nhật.',
   },
   {
     icon: <SupportAgentIcon sx={{ fontSize: 48 }} />,
-    title: 'Hỗ trợ 24/7',
-    description: 'Đội ngũ tư vấn viên luôn sẵn sàng giải đáp mọi thắc mắc.',
+    title: 'Linh hoạt học tập',
+    description: 'Là trung tâm đầu tiên áp dụng cho học Viên có thể vừa học Online vừa học trực tiếp.',
   },
 ];
 

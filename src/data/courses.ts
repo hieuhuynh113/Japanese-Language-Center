@@ -15,15 +15,15 @@ export interface Course {
 
 export const courses: Course[] = [
   {
-    id: 'n5-offline',
-    title: 'Khóa học N5 - Offline',
-    description: 'Khóa học JLPT N5 offline dành cho người mới bắt đầu, giúp bạn xây dựng nền tảng vững chắc với tiếng Nhật.',
+    id: 'n5',
+    title: 'Khóa học N5',
+    description: 'Khóa học JLPT N5 dành cho người mới bắt đầu, giúp bạn xây dựng nền tảng vững chắc với tiếng Nhật.',
     type: 'offline',
     level: 'N5 - Sơ cấp',
     duration: '4 tháng',
     schedule: '3 buổi/tuần, 2 tiếng/buổi',
     price: '4.500.000 VNĐ',
-    image: 'https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+    image: 'https://senquocte.com/wp-content/uploads/2022/06/Anh-dai-dien-N5.jpg',
     curriculum: [
       'Học 50 chữ Hiragana và Katakana',
       'Học 100 chữ Kanji cơ bản',
@@ -41,6 +41,66 @@ export const courses: Course[] = [
       'Nắm vững kiến thức cơ bản tiếng Nhật',
       'Có thể giao tiếp đơn giản',
       'Đạt chứng chỉ JLPT N5',
+      'Tài liệu học tập đầy đủ'
+    ]
+  },
+  {
+    id: 'n4',
+    title: 'Khóa học N4',
+    description: 'Khóa học JLPT N4 giúp nâng cao khả năng tiếng Nhật của bạn lên cấp độ tiếp theo.',
+    type: 'offline',
+    level: 'N4 - Sơ trung cấp',
+    duration: '4 tháng',
+    schedule: '3 buổi/tuần, 2 tiếng/buổi',
+    price: '5.000.000 VNĐ',
+    image: 'https://senquocte.com/wp-content/uploads/2022/09/khai-giang-n4-buoi-toi-1.jpg',
+    curriculum: [
+      'Ôn tập kiến thức N5',
+      'Học 150 chữ Kanji mới',
+      'Ngữ pháp N4',
+      'Từ vựng 1500 từ',
+      'Luyện nghe, nói, đọc, viết nâng cao',
+      'Thực hành giao tiếp thường xuyên'
+    ],
+    requirements: [
+      'Đã hoàn thành N5 hoặc tương đương',
+      'Có thể học online hoặc offline',
+      'Cam kết học tập đầy đủ'
+    ],
+    benefits: [
+      'Nâng cao kiến thức tiếng Nhật',
+      'Giao tiếp tự tin hơn',
+      'Đạt chứng chỉ JLPT N4',
+      'Tài liệu học tập đầy đủ'
+    ]
+  },
+  {
+    id: 'n3',
+    title: 'Khóa học N3',
+    description: 'Khóa học JLPT N3 giúp bạn đạt trình độ trung cấp và có thể sử dụng tiếng Nhật trong công việc.',
+    type: 'offline',
+    level: 'N3 - Trung cấp',
+    duration: '6 tháng',
+    schedule: '3 buổi/tuần, 2 tiếng/buổi',
+    price: '6.000.000 VNĐ',
+    image: 'https://senquocte.com/wp-content/uploads/2016/03/tieng-nhat-n3.png',
+    curriculum: [
+      'Ôn tập kiến thức N4',
+      'Học 300 chữ Kanji mới',
+      'Ngữ pháp N3',
+      'Từ vựng 3000 từ',
+      'Luyện nghe, nói, đọc, viết nâng cao',
+      'Thực hành giao tiếp thường xuyên'
+    ],
+    requirements: [
+      'Đã hoàn thành N4 hoặc tương đương',
+      'Có thể học online hoặc offline',
+      'Cam kết học tập đầy đủ'
+    ],
+    benefits: [
+      'Đạt trình độ trung cấp',
+      'Giao tiếp thành thạo',
+      'Đạt chứng chỉ JLPT N3',
       'Tài liệu học tập đầy đủ'
     ]
   },

@@ -11,7 +11,7 @@ export interface NewsItem {
    }[];
    date: string; // Ngày đăng bài
    author: string; // Tên tác giả hoặc bộ phận quản lý tin tức
-   category: 'event' | 'announcement' | 'culture'; // Phân loại bài viết
+   category: 'event' | 'announcement' | 'study-tips' | 'jobs'; // Phân loại bài viết
    tags: string[]; // Các từ khóa liên quan
  }
  
@@ -86,7 +86,7 @@ export const news: NewsItem[] = [
     ],
     date: '2024-07-20',
     author: 'Ban Văn hóa - Trung tâm Tiếng Nhật',
-    category: 'culture',
+    category: 'event',
     tags: ['lễ hội', 'văn hóa', 'sự kiện', 'workshop', 'ẩm thực', 'nghệ thuật']
   },
   {

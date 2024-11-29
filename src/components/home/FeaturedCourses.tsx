@@ -14,9 +14,6 @@ import { Link } from 'react-router-dom';
 import { courses } from '../../data/courses';
 
 const FeaturedCourses = () => {
-  // Select first 3 courses to display
-  const featuredCourses = courses.slice(0, 3);
-  
   return (
     <Box sx={{ py: 8, bgcolor: 'background.default' }}>
       <Container>
@@ -27,10 +24,10 @@ const FeaturedCourses = () => {
           gutterBottom
           sx={{ mb: 6 }}
         >
-          Khóa học tiêu biểu
+          Khóa học nổi bật
         </Typography>
         <Grid container spacing={4}>
-          {featuredCourses.map((course) => (
+          {courses.slice(0, 3).map((course) => (
             <Grid item xs={12} md={4} key={course.id}>
               <Card
                 sx={{

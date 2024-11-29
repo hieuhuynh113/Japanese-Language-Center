@@ -94,12 +94,14 @@ export const jobPositions: JobPosition[] = [
     type: 'Toàn thời gian',
     salary: '18-22 triệu',
     requirements: [
+      'Giao tiếp tiếng Nhật tốt',
       'Có chứng chỉ JLPT N2',
       'Tốt nghiệp Cao đẳng trở lên',
-      'Kỹ năng giao tiếp tốt',
-      'Có định hướng phát triển trong lĩnh vực kinh doanh'
+      'Kỹ năng bán hàng và đàm phán',
+      'Năng động, nhiệt tình',
+      'Sẵn sàng đi công tác khi cần'
     ],
-    description: 'DEF Trading Co., Ltd đang tìm kiếm nhân viên kinh doanh thành thạo tiếng Nhật để mở rộng thị trường và phát triển quan hệ với đối tác Nhật Bản.',
+    description: 'DEF Trading tuyển dụng nhân viên kinh doanh thành thạo tiếng Nhật để phát triển thị trường và chăm sóc khách hàng Nhật Bản. Đây là cơ hội tốt để phát triển sự nghiệp trong lĩnh vực kinh doanh quốc tế.',
     responsibilities: [
       'Tìm kiếm và phát triển khách hàng mới',
       'Duy trì và chăm sóc khách hàng hiện tại',
@@ -110,10 +112,40 @@ export const jobPositions: JobPosition[] = [
       'Lương cơ bản + hoa hồng hấp dẫn',
       'Thưởng theo doanh số',
       'Chế độ bảo hiểm đầy đủ',
-      'Cơ hội đi công tác Nhật Bản',
-      'Đào tạo kỹ năng chuyên môn'
+      'Được đào tạo kỹ năng bán hàng',
+      'Cơ hội đi công tác Nhật Bản'
     ],
     deadline: '2024-03-20'
+  },
+  {
+    id: 'job-4',
+    title: 'Thông Dịch Viên Tiếng Nhật',
+    location: 'Bình Dương',
+    type: 'Toàn thời gian',
+    salary: '25-30 triệu',
+    requirements: [
+      'Thông thạo tiếng Nhật (JLPT N1)',
+      'Tốt nghiệp Đại học',
+      'Có 3 năm kinh nghiệm',
+      'Kinh nghiệm thông dịch trong môi trường doanh nghiệp',
+      'Kỹ năng giao tiếp và xử lý tình huống tốt',
+      'Có thể đi công tác ngắn hạn tại Nhật Bản'
+    ],
+    description: 'GHI Solutions Corporation cần tuyển Thông dịch viên tiếng Nhật có kinh nghiệm để hỗ trợ các cuộc họp, đàm phán và dự án với đối tác Nhật Bản. Công việc yêu cầu kỹ năng thông dịch chuyên nghiệp và khả năng làm việc trong môi trường áp lực cao.',
+    responsibilities: [
+      'Thông dịch trong các cuộc họp và đàm phán',
+      'Hỗ trợ giao tiếp với đối tác Nhật Bản',
+      'Dịch tài liệu và văn bản quan trọng',
+      'Tham gia các dự án và sự kiện quốc tế'
+    ],
+    benefits: [
+      'Lương cạnh tranh theo năng lực',
+      'Phụ cấp đi lại và công tác phí',
+      'Được đào tạo nâng cao nghiệp vụ tại Nhật',
+      'Chế độ bảo hiểm và phúc lợi hấp dẫn',
+      'Môi trường làm việc quốc tế'
+    ],
+    deadline: '2024-03-25'
   }
 ];
 

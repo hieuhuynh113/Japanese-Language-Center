@@ -97,7 +97,8 @@ const HomePage = () => {
       variants={containerVariants}
       style={{
         overflow: 'hidden',
-        position: 'relative'
+        position: 'relative',
+        marginTop: '-64px', // Offset the navbar height
       }}
     >
       {/* Parallax Background */}
