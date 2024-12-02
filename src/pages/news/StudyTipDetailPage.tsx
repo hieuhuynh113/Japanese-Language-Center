@@ -45,7 +45,7 @@ const createId = (text: string) => {
 };
 
 const StudyTipDetailPage = () => {
-  const { postId } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -53,7 +53,7 @@ const StudyTipDetailPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   // Find the post based on the ID from the URL
-  const post = studyTipsPosts.find(item => item.id === postId);
+  const post = studyTipsPosts.find(item => item.id === id);
 
   useEffect(() => {
     if (!post) {

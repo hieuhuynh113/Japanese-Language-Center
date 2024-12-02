@@ -680,11 +680,17 @@ const StudyTipsPage = () => {
               transition={{ duration: 0.5 }}
             >
               <Card>
-                <Grid container>
-                  <Grid item xs={12} md={4} 
-                    onClick={() => navigate(`/news/study-tips/${post.id}`)}
-                    sx={{ cursor: 'pointer' }}
-                  >
+                <Grid container 
+                  onClick={() => navigate(`/news/study-tips/${post.id}`)}
+                  sx={{ 
+                    cursor: 'pointer',
+                    '&:hover': {
+                      bgcolor: 'rgba(0, 0, 0, 0.04)',
+                      transition: 'background-color 0.3s'
+                    }
+                  }}
+                >
+                  <Grid item xs={12} md={4}>
                     <CardMedia
                       component="img"
                       height="250"
@@ -699,8 +705,6 @@ const StudyTipsPage = () => {
                         <Typography 
                           variant="h6" 
                           gutterBottom 
-                          onClick={() => navigate(`/news/study-tips/${post.id}`)}
-                          sx={{ cursor: 'pointer', '&:hover': { color: 'primary.main' } }}
                         >
                           {post.title}
                         </Typography>

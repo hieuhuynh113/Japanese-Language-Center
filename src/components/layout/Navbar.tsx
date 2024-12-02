@@ -70,6 +70,7 @@ const pages = [
       { title: 'Tin Tức & Sự Kiện', path: '/news' },
       { title: 'Góc Học Tập', path: '/news/study-tips' },
       { title: 'Cơ Hội Việc Làm', path: '/news/jobs' },
+      { title: 'Văn hóa Nhật Bản', path: '/news/japanese-culture' },
     ],
   },
   {

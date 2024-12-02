@@ -21,6 +21,8 @@ import JobDetailPage from './pages/news/JobDetailPage';
 import StudyTipDetailPage from './pages/news/StudyTipDetailPage';
 import CareerDetailPage from './pages/careers/JobDetailPage';
 import JobApplicationPage from './pages/careers/JobApplicationPage';
+import JapaneseCulturePage from './pages/news/JapaneseCulturePage';
+import JapaneseCultureDetailPage from './pages/news/JapaneseCultureDetailPage';
 
 // About Pages
 import TeachersPage from './pages/about/TeachersPage';
@@ -99,31 +101,32 @@ function App() {
             <Route path="/study-abroad/experiences" element={<ExperiencesPage />} />
             <Route path="/study-abroad/consulting" element={<ConsultingPage />} />
             <Route path="/study-abroad/scholarships" element={<ScholarshipsPage />} />
-            <Route path="/study-abroad/scholarships/:scholarshipId" element={<ScholarshipDetailPage />} />
             <Route path="/study-abroad/partners" element={<PartnersPage />} />
-
+            <Route path="/study-abroad/scholarships/:id" element={<ScholarshipDetailPage />} />
+            
             {/* Schedule Routes */}
             <Route path="/schedule" element={<SchedulePage />} />
             <Route path="/schedule/openings" element={<OpeningsPage />} />
             <Route path="/schedule/timetable" element={<TimetablePage />} />
             <Route path="/schedule/jlpt" element={<JLPTPage />} />
-
+            
             {/* News Routes */}
             <Route path="/news" element={<NewsPage />} />
-            <Route path="/news/:id" element={<NewsDetailPage />} />
             <Route path="/news/study-tips" element={<StudyTipsPage />} />
-            <Route path="/news/study-tips/:postId" element={<StudyTipDetailPage />} />
             <Route path="/news/jobs" element={<JobsPage />} />
-            <Route path="/news/jobs/:jobId" element={<JobDetailPage />} />
-
-            {/* Careers Routes */}
+            <Route path="/news/japanese-culture" element={<JapaneseCulturePage />} />
+            <Route path="/news/japanese-culture/:postId" element={<JapaneseCultureDetailPage />} />
+            <Route path="/news/:id" element={<NewsDetailPage />} />
+            <Route path="/news/study-tips/:id" element={<StudyTipDetailPage />} />
+            <Route path="/news/jobs/:id" element={<JobDetailPage />} />
+            
+            {/* Career Routes */}
             <Route path="/careers" element={<CareersPage />} />
-            <Route path="/careers/:jobId" element={<CareerDetailPage />} />
-            <Route path="/careers/:jobId/apply" element={<JobApplicationPage />} />
             <Route path="/careers/environment" element={<EnvironmentPage />} />
             <Route path="/careers/benefits" element={<BenefitsPage />} />
-
-            {/* Contact Route */}
+            <Route path="/careers/jobs/:id" element={<CareerDetailPage />} />
+            <Route path="/careers/jobs/:id/apply" element={<JobApplicationPage />} />
+            
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </Box>
