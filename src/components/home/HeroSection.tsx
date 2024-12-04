@@ -13,7 +13,7 @@ const HeroSection = () => {
     >
       <Box
         component="img"
-        src="https://senquocte.com/wp-content/uploads/2023/05/anhbiaweb-1600-×-852-px.png"
+        src="https://thethaovanhoa.mediacdn.vn/372676912336973824/2022/12/15/image001-1671095078862468239333.jpg"
         alt="Japanese Language Center Hero"
         sx={{
           width: '100%',

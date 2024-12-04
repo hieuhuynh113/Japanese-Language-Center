@@ -200,8 +200,8 @@ const Navbar = () => {
               <StyledLink to="/">
                 <Box
                   component="img"
-                  src="https://senquocte.com/wp-content/uploads/2023/03/cropped-Logo-512x512-nen-trang.jpg"
-                  alt="日本語センター"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlufop_yeKxwt0PgMHRhK4gk-ZdKAM63eMmA&s"
+                  alt="Japanese Language Center"
                   sx={{
                     height: 50,
                     width: 'auto',
@@ -298,8 +298,8 @@ const Navbar = () => {
               <StyledLink to="/">
                 <Box
                   component="img"
-                  src="https://senquocte.com/wp-content/uploads/2023/03/cropped-Logo-512x512-nen-trang.jpg"
-                  alt="日本語センター"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlufop_yeKxwt0PgMHRhK4gk-ZdKAM63eMmA&s"
+                  alt="Japanese Language Center"
                   sx={{
                     height: 40,
                     width: 'auto',
