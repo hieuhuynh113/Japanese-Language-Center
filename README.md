@@ -1,46 +1,95 @@
-# Getting Started with Create React App
+# 🎌 Trung Tâm Tiếng Nhật - Japanese Language Center
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-18.3.1-61dafb.svg?style=flat&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-3178c6.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Material-UI](https://img.shields.io/badge/MUI-6.1.8-0081cb.svg?style=flat&logo=mui)](https://mui.com/)
+[![License](https://img.shields.io/badge/Giấy%20phép-MIT-green.svg)](LICENSE)
 
-## Available Scripts
+Website hiện đại, đáp ứng cho Trung tâm Tiếng Nhật được phát triển bằng React và TypeScript. Website cung cấp thông tin đầy đủ về các khóa học tiếng Nhật, chương trình du học, kiến thức văn hóa và nhiều nội dung hữu ích khác.
 
-In the project directory, you can run:
+## ✨ Tính Năng Nổi Bật
 
-### `npm start`
+- 📚 Danh mục khóa học đầy đủ (từ trình độ N5 đến N3)
+- 🌏 Tư vấn du học và các chương trình du học Nhật Bản
+- 📅 Lịch thi JLPT và thời khóa biểu khóa học
+- 📰 Tin tức và kiến thức văn hóa Nhật Bản
+- 🎓 Cơ hội học bổng du học
+- 💼 Cơ hội việc làm và thông tin tuyển dụng
+- 🌐 Hỗ trợ đa ngôn ngữ
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚀 Bắt Đầu Sử Dụng
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Yêu Cầu Hệ Thống
 
-### `npm test`
+Đảm bảo bạn đã cài đặt:
+- Node.js (v16 trở lên)
+- npm (v7 trở lên)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Cài Đặt
 
-### `npm run build`
+1. Clone repository
+```bash
+git clone https://github.com/your-username/japanese-language-center.git
+cd japanese-language-center
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Cài đặt các gói phụ thuộc
+```bash
+npm install --legacy-peer-deps
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Khởi động môi trường phát triển
+```bash
+npm start
+```
+Ứng dụng sẽ tự động mở trong trình duyệt mặc định tại địa chỉ `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Công Nghệ Sử Dụng
 
-### `npm run eject`
+- **Framework Frontend**: [React](https://reactjs.org/)
+- **Hệ thống Type**: [TypeScript](https://www.typescriptlang.org/)
+- **Thành phần UI**: [Material-UI (MUI)](https://mui.com/)
+- **Định tuyến**: [React Router](https://reactrouter.com/)
+- **Quản lý Form**: [Formik](https://formik.org/) & [Yup](https://github.com/jquense/yup)
+- **Hiệu ứng chuyển động**: [Framer Motion](https://www.framer.com/motion/)
+- **Đa ngôn ngữ**: [i18next](https://www.i18next.com/)
+- **Xử lý Media**: 
+  - [React Player](https://github.com/CookPete/react-player)
+  - [React Image Gallery](https://github.com/xiaolin/react-image-gallery)
+  - [React YouTube](https://github.com/tjallingt/react-youtube)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📁 Cấu Trúc Dự Án
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+├── components/     # Các thành phần UI có thể tái sử dụng
+│   ├── home/      # Thành phần trang chủ
+│   └── layout/    # Thành phần bố cục (Header, Footer, v.v.)
+├── pages/         # Các trang
+│   ├── about/     # Trang giới thiệu
+│   ├── careers/   # Trang thông tin việc làm
+│   ├── courses/   # Trang khóa học
+│   ├── news/      # Trang tin tức và văn hóa
+│   ├── schedule/  # Trang lịch học
+│   └── study-abroad/ # Trang thông tin du học
+├── data/          # Dữ liệu tĩnh và nội dung
+└── types/         # Định nghĩa kiểu TypeScript
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📜 Các Lệnh Có Sẵn
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `npm start` - Chạy ứng dụng ở chế độ phát triển
+- `npm test` - Khởi chạy bộ kiểm thử
+- `npm run build` - Đóng gói ứng dụng cho môi trường sản xuất
 
-## Learn More
+## 🤝 Đóng Góp
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Chúng tôi luôn hoan nghênh mọi đóng góp! Vui lòng gửi Pull Request nếu bạn muốn đóng góp cho dự án.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📝 Giấy Phép
+
+Dự án này được cấp phép theo Giấy phép MIT - xem file [LICENSE](LICENSE) để biết thêm chi tiết.
+
+## 📧 Liên Hệ
+
+Mọi thắc mắc, vui lòng liên hệ chúng tôi qua email: contact@japaneselanguagecenter.com
